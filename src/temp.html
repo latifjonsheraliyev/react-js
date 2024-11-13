@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+<body>
+    <main>
+        <section class="dashboard">
+            <div class="container">
+                
+                <div class="dashboard-left">
+
+                    <div class="left-top">
+
+                        <a href="./index.html"><img src="./left-logo.svg" alt=""></a>
+
+                        <div class="dashboard-col">
+                            <div class="dashboard-div">
+                                <div class="oq-line"></div>
+                                <img src="dashboard-div-img.svg" alt="img">
+                                <h4>Dashboard</h4>
+                            </div>
+                            <div class="dashboard-div-item">
+                                <button><i class="fa-solid fa-car"></i></button>
+                                <h4>Drivers</h4>
+                            </div>
+                            <div class="dashboard-div-item">
+                                <button><i class="fa-solid fa-book"></i></button>
+                                <h4>Bookings</h4>
+                            </div>
+
+                            <div class="dashboard-div-item">
+                                <button><i class="fa-solid fa-bell"></i></button>
+                                <h4>Notifications</h4>
+                            </div>
+
+                            <div class="dashboard-div-item">
+                                <button><i class="fa-solid fa-gear"></i></button>
+                                <h4>Settings</h4>
+                            </div>
+
+                        </div>
+
+
+                        <div class="report-col">
+                            <h5>Report</h5>
+
+                            <div class="report-item">
+                                <button><i class="fa-solid fa-credit-card"></i></button>
+                                <h4>Payment Details</h4>
+                            </div>
+                            <div class="report-item">
+                                <button><i class="fa-solid fa-money-bill-transfer"></i></button>
+                                <h4>Transactions</h4>
+                            </div>
+                            <div class="report-item">
+                                <button><i class="fa-solid fa-file-lines"></i></button>
+                                <h4>Car Report</h4>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="left-bottom">
+                        <button><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
+                    </div>
+
+                </div>
+
+                <div class="dashboard-center">  <!-- markaz div boshlanishi  -->
+                    <div class="dashboard-center-header">
+                        <h4>Todays Statistics</h4>
+                        <p>Tue, 14 Nov, 2022, 11.30 AM </p>
+                    </div>
+
+                    <div class="income-div">
+                        <div class="income-top">
+                            <h6>Income</h6>
+                            <button>Today</button>
+                        </div>
+                        <div class="income-center">
+                            <h3>5 person</h3>
+                            <h6>↓ 15%</h6>
+                        </div>
+                        <h5>Compared to $9940 yesterday</h5>
+                        <div class="income-footer">
+                            <h5>Last week Income</h5>
+                            <h5>$25658.00</h5>
+                        </div>
+                    </div>
+
+                    <div class="income-div">
+                        <div class="income-top">
+                            <h6>Expences</h6>
+                            <button>Today</button>
+                        </div>
+                        <div class="income-center">
+                            <h3>$ 5660.00</h3>
+                            <h6>↑ 2.5%</h6>
+                        </div>
+                        <h5>Compared to $5240 yesterday</h5>
+                        <div class="income-footer">
+                            <h5>Last week expences</h5>
+                            <h5>$22658.00</h5>
+                        </div>
+                    </div>
+
+                    <div class="hire-div">
+                        <div class="income-top">
+                            <h6>Expences</h6>
+                            <button>Today</button>
+                        </div>
+                        <img src="pie-chart.svg" alt="img">
+                        <div class="hire-bottom">
+                            <div class="hire-bottom-item">
+                                <img src="dumaloq.svg" alt="img">
+                                <h4>Total Hired</h4>
+                                <h5>54% <span style="color: green;">↑</span></h5>
+                            </div>
+                            <div class="hire-bottom-item">
+                                <img src="yashildumaloq.svg" alt="img">
+                                <h4>Total Canceled</h4>
+                                <h5>20% <span style="color: green;">↑</span></h5>
+                            </div>
+                            <div class="hire-bottom-item">
+                                <img src="qizildumaloq.svg" alt="img">
+                                <h4>Total Pending</h4>
+                                <h5>26%  <span style="color: red;">↑</span></h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="dashboard-right">
+                    <div class="right-header">
+                        <button><i class="fa-solid fa-bell"></i></button>
+                        <form action="">
+                            <input type="text" placeholder="Search here">
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="car">
+                        <h3>Car Availablity</h3>
+                        <div class="car-bottom">
+                            <div class="car-number">
+                               <button> <i class="fa-solid fa-car"></i></button>
+                                <h5>Car number</h5>
+                                <button><i class="fa-solid fa-chevron-down"></i></button>
+                            </div>
+
+                            <div class="two-div">
+                                <div class="div-left"> 
+                                    <button><i class="fa-regular fa-calendar"></i></button>
+                                    <h5>Nov 20, 2022</h5>
+                                </div>
+                                <div class="div-right">
+                                    <button><i class="fa-regular fa-clock"></i></button>
+                                    <h5>10 AM</h5>
+                                    <button><i class="fa-solid fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                            <button class="check">Check</button>
+
+                        </div>
+                    </div>
+
+                    <!-- live car -->
+                    <div class="live">
+
+                        <div class="live-top">
+                            <h4>Live Car Status</h4>
+                           <h6><i class="fa-solid fa-sliders"></i> Filter</h6>
+                        </div>
+
+                        <div class="live-header">
+                            <div class="live-header-left">
+                                <h6>No.</h6>
+                                <h6>Car no.</h6>
+                                <h6>Driver</h6>
+                            </div>
+                            <div class="live-header-right">
+                                <h5>Status</h5>
+                                <h5>Earning</h5>
+                            </div>
+                        </div>
+
+
+
+                         <!-- <div class="live-items">
+                            <h5>01</h5>
+                            <button>6465</button>
+                            <div class="human">
+                                <img src="human1.svg" alt="img">
+                                <h6>Alex Noman</h6>
+                            </div>
+
+                            <div class="completed">
+                                <img src="complet1.svg" alt="img">
+                                <h6>Completed</h6>
+                            </div>
+
+                            <div class="price">
+                                <h5>$ 35.44</h5>
+                            </div>
+                            <button class="detalis">Details</button>
+                        </div>  -->
+
+                    
+
+
+                    </div>
+
+                    <div class="summary">
+
+                        <div class="summary-header">
+
+                            <div class="summary-header-left">
+                                <h5>Earning Summary</h5>
+                                <h6>Mar 2022 - Oct 2022 <i class="fa-solid fa-chevron-down"></i></h6>
+                            </div>
+                            <div class="summary-header-right">
+                                <div class="month">
+                                    <img src="kok.svg" alt="">
+                                    <h6>Last 6 months</h6>
+                                </div>
+                                <div class="month">
+                                    <img src="grey.svg" alt="">
+                                    <h6>Same period last year</h6>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="summary-body">
+
+                            <div class="summary-body-left">
+                                <h5>$300k</h5>
+                                <h5>$200k</h5>
+                                <h5>$100k</h5>
+                                <h5>$0.00</h5>
+                            </div>
+                            <div class="summary-body-right">
+                                <img src="summarybody.svg" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <!-- modal start -->
+    <div class="main-modal">
+
+    <div class="modal-user-data">
+       
+
+    </div>
+    </div>
+
+
+
+
+</body>
+</html>

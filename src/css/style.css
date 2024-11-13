@@ -1,0 +1,384 @@
+// Define color variables once at the top
+$grey: #a2a2a2;
+$red: red;
+$green: rgb(8, 165, 8);
+$black: #656575;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap");
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.dashboard > div {
+  display: flex;
+  gap: 20px;
+}
+
+.main-modal {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  backdrop-filter: blur(7px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.modal-user-data {
+  padding: 30px;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(225, 218, 218, 0.233);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: gray;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+h5, h4, h3 {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 171%;
+  color: $grey;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+.user, .status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 16px;
+  color: $black;
+}
+
+.status h5 {
+  font-weight: 300;
+  font-size: 16px;
+  color: $grey;
+}
+
+.descrip p {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 171%;
+  color: $grey;
+}
+
+.dashboard-center {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 288px;
+}
+
+.dashboard-center-header {
+  padding: 32px 0;
+}
+
+.dashboard-center-header h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: $black;
+}
+
+.dashboard-center-header p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: $grey;
+}
+
+.income-div {
+  border-radius: 8px;
+  box-shadow: 0 8px 24px 0 rgba(69, 69, 80, 0.1);
+  background: #fdfdfd;
+  width: 288px;
+  height: 190px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.income-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.income-center h3 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 143%;
+  color: #01150c;
+}
+
+.income-center h6 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 175%;
+  letter-spacing: -0.01em;
+  color: $red;
+}
+
+.income-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.income-footer h5 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 171%;
+  color: $grey;
+}
+
+.income-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.income-top h6 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  color: $grey;
+}
+
+.income-top button {
+  border-radius: 2px;
+  padding: 4px 8px;
+  width: 52px;
+  height: 24px;
+  background: #f4f5f7;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  text-align: right;
+  color: $grey;
+}
+
+.hire-div {
+  border-radius: 8px;
+  padding: 20px;
+  width: 288px;
+  box-shadow: 0 8px 24px 0 rgba(69, 69, 80, 0.1);
+  background: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.hire-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hire-bottom-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hire-bottom-item h4, .hire-bottom-item h5 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $black;
+}
+
+.dashboard-right {
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 20px;
+  padding-top: 30px;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 40px;
+}
+
+.right-header button {
+  background-color: transparent;
+  color: grey;
+  font-size: 20px;
+}
+
+.right-header form {
+  border-radius: 12px;
+  padding: 12px 24px 12px 32px;
+  box-shadow: 0 3px 27px 0 rgba(69, 69, 80, 0.1);
+  background: #fff;
+  width: 366px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-header form input {
+  border: none;
+  font-size: 16px;
+  color: grey;
+}
+
+.right-header form button {
+  background-color: transparent;
+  font-size: 17px;
+  color: grey;
+}
+
+.car {
+  border-radius: 8px;
+  margin-top: 33px;
+  width: 850px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px;
+  box-shadow: 0 8px 24px 0 rgba(69, 69, 80, 0.1);
+  background: #fff;
+}
+
+.car-bottom {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.car-number {
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  padding: 12px 16px;
+  width: 213px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.car-number button {
+  font-size: 18px;
+  color: #656575;
+  background-color: transparent;
+}
+
+.car-number h5 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $grey;
+}
+
+.two-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-left, .div-right {
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  padding: 12px 16px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.div-left {
+  width: 188px;
+  border-radius: 8px 0 0 8px;
+}
+
+.div-right {
+  gap: 10px;
+  width: 167px;
+  border-radius: 0 8px 8px 0;
+}
+
+.check {
+  border-radius: 4px;
+  padding: 4px 16px;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f5f7;
+}
+
+.check button {
+  border: none;
+  outline: none;
+}
+
+h3 {
+  font-size: 22px;
+}
